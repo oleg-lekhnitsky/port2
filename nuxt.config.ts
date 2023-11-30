@@ -6,5 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/web-vitals'
-  ]
+  ],
+  image: {
+    format: ['webp'],
+  }
 })
