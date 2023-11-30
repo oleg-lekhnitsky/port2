@@ -11,6 +11,9 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.1.0",
+    "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/web-vitals": "^0.2.6",
     "nuxt": "^3.8.2",
     "sass": "^1.69.5",
     "vue": "^3.3.8",
