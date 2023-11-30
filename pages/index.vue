@@ -1,11 +1,9 @@
 <template>
   <div>
     <h1>Hello</h1>
-
-
   </div>
   <div class="wrapper">
-    <img src="/img/1.png" alt="Discover Nuxt 3" />
+    <LazyNuxtImg src="/img/1.png" format="webp" alt="Discover Nuxt 3" />
     <img src="/img/2.png" alt="Discover Nuxt 3" />
     <img src="/img/3.png" alt="Discover Nuxt 3" />
     <img src="/img/4.png" alt="Discover Nuxt 3" />
