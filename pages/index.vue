@@ -3,7 +3,11 @@
     <h1>Hello</h1>
   </div>
   <div class="imageTrailEffectBlockContainer">
-    <OriginalImageTrailEffectBlock />
+    <CustomImageTrailEffectBlock
+      :image-urls="imageUrls"
+      :is-images-disappear="true"
+    />
+    <!-- <OriginalImageTrailEffectBlock /> -->
   </div>
   <div class="wrapper">
     <LazyNuxtImg src="/img/1.png" format="webp" alt="Discover Nuxt 3" />
@@ -18,7 +22,12 @@
 </template>
 
 <script setup lang="ts">
-import OriginalImageTrailEffectBlock from "~/components/OriginalImageTrailEffectBlock.vue";
+import CustomImageTrailEffectBlock from "~/components/CustomImageTrailEffectBlock.vue";
+// import OriginalImageTrailEffectBlock from "~/components/OriginalImageTrailEffectBlock.vue";
+
+const imageUrls = [...Array(8)].map(
+  (_, index) => `/trail-effect-pictures/${index + 1}.jpg`
+);
 </script>
 
 <style lang="scss">
