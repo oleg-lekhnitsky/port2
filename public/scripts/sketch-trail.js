@@ -60,19 +60,19 @@ var saveSize = 0;
 var widgetOn = true;
 let recMessageOn = false;
 
+var isScreenTypeMouseMediaQuery = window.matchMedia(
+  "(any-hover: hover), (hover: hover) and (pointer: fine)"
+);
+
 function preload() {
   for (var m = 0; m < pgImageHoldCount; m++) {
-    // images loading
+    // #Images загрузка картинок для трейл эффекта здесь 👇
     pgImage[m] = loadImage("trail-effect-pictures/" + (m + 1) + ".jpg");
   }
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
-  var isScreenTypeMouseMediaQuery = window.matchMedia(
-    "(any-hover: hover), (hover: hover) and (pointer: fine)"
-  );
 
   var isScreenTypeMouse = isScreenTypeMouseMediaQuery.matches;
 
@@ -174,9 +174,9 @@ var pointerDistanceFromLastImage = 0;
 var THRESHOLD_POINTER_DISTANCE_VALUE = 70;
 
 function mouseMoved() {
-  if (window.innerWidth >= 768) {
-    var mouseOn = true;
+  var isScreenTypeMouse = isScreenTypeMouseMediaQuery.matches;
 
+  if (isScreenTypeMouse) {
     var pointerCoordinates = {
       x: mouseX,
       y: mouseY,
@@ -204,7 +204,9 @@ function mouseMoved() {
 }
 
 function mousePressed() {
-  if (window.innerWidth < 768) {
+  var isScreenTypeMouse = isScreenTypeMouseMediaQuery.matches;
+
+  if (!isScreenTypeMouse) {
     var mouseOn = true;
 
     if (mouseOn) {
@@ -241,7 +243,9 @@ function windowResized() {
 }
 
 function mouseReleased() {
-  if (window.innerWidth < 768) {
+  var isScreenTypeMouse = isScreenTypeMouseMediaQuery.matches;
+
+  if (!isScreenTypeMouse) {
     trailOn = false;
   }
 }
