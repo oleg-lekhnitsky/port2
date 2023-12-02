@@ -14,9 +14,15 @@
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/web-vitals": "^0.2.6",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/p5": "^1.7.4",
     "nuxt": "^3.8.2",
     "sass": "^1.69.5",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "p5": "^1.9.0"
   }
 }
