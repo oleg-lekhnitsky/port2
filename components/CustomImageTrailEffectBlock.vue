@@ -20,12 +20,7 @@ const { handleMount, handleUnmount } = await initTrailEffect(
   props as IInitTrailEffectProps
 );
 
-onMounted(() => {
-  if (canvasRef.value) {
-    handleMount();
-  }
-});
-
+onMounted(handleMount);
 onUnmounted(handleUnmount);
 </script>
 
