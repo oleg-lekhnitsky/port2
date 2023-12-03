@@ -10,3 +10,4 @@ export const IMAGE_TRANSITION = {
   DURATION: 0.7,
   TOTAL_DURATION: 0.7 + 0.7 + 1,
 };
+export const IS_IMAGES_DISAPPEAR = false;

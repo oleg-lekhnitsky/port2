@@ -10,7 +10,6 @@ import {
 
 const props = defineProps({
   imageUrls: Array,
-  isImagesDisappear: Boolean,
 });
 
 const canvasRef = ref<HTMLCanvasElement | null>(null);

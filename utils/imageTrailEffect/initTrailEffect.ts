@@ -1,5 +1,6 @@
 import {
   IMAGE_TRANSITION,
+  IS_IMAGES_DISAPPEAR,
   THRESHOLD_POINTER_DISTANCE_VALUE,
 } from "./constants";
 import { getNewDrawingImage } from "./getNewDrawingImage";
@@ -12,7 +13,7 @@ import type {
 
 export const initTrailEffect = async (
   canvasRef: globalThis.Ref<HTMLCanvasElement | null>,
-  { imageUrls, isImagesDisappear = false }: IInitTrailEffectProps
+  { imageUrls }: IInitTrailEffectProps
 ) => {
   const imagesArray = await loadTrailEffectImages(imageUrls);
   let drawingImages: IDrawingImage[] = [];
@@ -60,12 +61,11 @@ export const initTrailEffect = async (
       const drawingImage = getNewDrawingImage({
         imageElement,
         pointerCoordinates,
-        isImagesDisappear,
       });
 
       drawingImages.push(drawingImage);
 
-      if (isImagesDisappear) {
+      if (IS_IMAGES_DISAPPEAR) {
         setTimeout(() => {
           drawingImages = drawingImages.filter(
             ({ id }) => id !== drawingImage.id

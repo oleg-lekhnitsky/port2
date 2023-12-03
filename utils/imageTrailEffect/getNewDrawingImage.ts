@@ -2,6 +2,7 @@ import {
   AVERAGE_IMAGE_DIAGONAL,
   DELTA_IMAGE_DIAGONAL,
   IMAGE_TRANSITION,
+  IS_IMAGES_DISAPPEAR,
 } from "./constants";
 import type { ICoordinates, IDrawingImage, ISizes } from "./types";
 import gsap from "gsap";
@@ -9,13 +10,11 @@ import gsap from "gsap";
 interface IGetNewImageDrawingImage {
   imageElement: HTMLImageElement;
   pointerCoordinates: ICoordinates;
-  isImagesDisappear: boolean;
 }
 
 export const getNewDrawingImage = ({
   imageElement,
   pointerCoordinates,
-  isImagesDisappear,
 }: IGetNewImageDrawingImage): IDrawingImage => {
   const initialCoordinates: ICoordinates = {
     x: pointerCoordinates.x * devicePixelRatio,
@@ -67,7 +66,7 @@ export const getNewDrawingImage = ({
     "<"
   );
 
-  if (isImagesDisappear) {
+  if (IS_IMAGES_DISAPPEAR) {
     timeline.to(drawingImage.sizes, {
       width: 0,
       height: 0,

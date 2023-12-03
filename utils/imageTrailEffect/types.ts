@@ -1,6 +1,5 @@
 export interface IInitTrailEffectProps {
   imageUrls: string[];
-  isImagesDisappear?: boolean;
 }
 
 export interface ICoordinates {
