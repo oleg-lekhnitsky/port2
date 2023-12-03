@@ -1,0 +1,87 @@
+import type { ISizes } from "./types";
+
+interface IRenderPixelatedEffectClosureArgs {
+  canvasSizes: ISizes;
+  pixelArray: Uint8ClampedArray;
+  context: CanvasRenderingContext2D;
+}
+
+export const renderPixelatedEffectClosure =
+  ({ canvasSizes, pixelArray, context }: IRenderPixelatedEffectClosureArgs) =>
+  (inputTargetPixelSize: number) => {
+    const targetPixelSize = inputTargetPixelSize * devicePixelRatio;
+
+    const fittedPixelsCount = Math.floor(canvasSizes.width / targetPixelSize);
+    const floatPixelSize = canvasSizes.width / fittedPixelsCount;
+
+    const sizesCompensationAccumulator = {
+      width: 0,
+      height: 0,
+    };
+
+    const sizesCompensationIntegerPart = {
+      width: 0,
+      height: 0,
+    };
+
+    const actualPixelSize = {
+      width: targetPixelSize,
+      height: targetPixelSize,
+    };
+
+    for (
+      let y = 0;
+      y <= canvasSizes.height - targetPixelSize;
+      y += targetPixelSize
+    ) {
+      sizesCompensationAccumulator.height += floatPixelSize - targetPixelSize;
+      sizesCompensationIntegerPart.height = Math.floor(
+        sizesCompensationAccumulator.height
+      );
+      sizesCompensationAccumulator.height -=
+        sizesCompensationIntegerPart.height;
+      actualPixelSize.height =
+        targetPixelSize + sizesCompensationIntegerPart.height;
+
+      if (y + targetPixelSize * 2 >= canvasSizes.height) {
+        actualPixelSize.height += 1;
+      }
+
+      sizesCompensationAccumulator.width = 0;
+
+      for (
+        let x = 0;
+        x <= canvasSizes.width - targetPixelSize;
+        x += targetPixelSize
+      ) {
+        sizesCompensationAccumulator.width += floatPixelSize - targetPixelSize;
+        sizesCompensationIntegerPart.width = Math.floor(
+          sizesCompensationAccumulator.width
+        );
+        sizesCompensationAccumulator.width -=
+          sizesCompensationIntegerPart.width;
+        actualPixelSize.width =
+          targetPixelSize + sizesCompensationIntegerPart.width;
+
+        if (x + targetPixelSize * 2 >= canvasSizes.width) {
+          actualPixelSize.width += 1;
+        }
+
+        const pixelIndex =
+          (x +
+            Math.round(actualPixelSize.width / 2) +
+            (y + Math.round(actualPixelSize.height / 2)) * canvasSizes.width) *
+          4;
+
+        context.fillStyle = `rgba(${pixelArray[pixelIndex]}, ${
+          pixelArray[pixelIndex + 1]
+        }, ${pixelArray[pixelIndex + 2]}, ${pixelArray[pixelIndex + 3]})`;
+
+        context.fillRect(x, y, actualPixelSize.width, actualPixelSize.height);
+
+        x += sizesCompensationIntegerPart.width;
+      }
+
+      y += sizesCompensationIntegerPart.height;
+    }
+  };
