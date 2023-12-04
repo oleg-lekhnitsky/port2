@@ -79,9 +79,10 @@ export const renderPixelatedEffectClosure =
         }
 
         const pixelIndex =
-          (x +
+          (Math.round(x) +
             Math.round(actualPixelSize.width / 2) +
-            (y + Math.round(actualPixelSize.height / 2)) * canvasSizes.width) *
+            (Math.round(y) + Math.round(actualPixelSize.height / 2)) *
+              canvasSizes.width) *
           4;
 
         context.fillStyle = `rgba(${pixelArray[pixelIndex]}, ${
