@@ -6,8 +6,8 @@ export const DELTA_IMAGE_DIAGONAL = 120;
 export const IMAGE_TRANSITION = {
   APPEARANCE_EASE: Power1.easeOut,
   DISAPPEARANCE_EASE: Power1.easeIn,
-  DISAPPEARANCE_DELAY: 1,
+  DISAPPEARANCE_DELAY: 2,
   DURATION: 0.7,
-  TOTAL_DURATION: 0.7 + 0.7 + 1,
+  TOTAL_DURATION: 0.7 + 0.7 + 2,
 };
-export const IS_IMAGES_DISAPPEAR = false;
+export const IS_IMAGES_DISAPPEAR = true;

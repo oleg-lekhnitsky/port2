@@ -3,10 +3,7 @@
     <h1>Hello</h1>
   </div>
   <div class="imageTrailEffectBlockContainer">
-    <CustomImageTrailEffectBlock
-      :image-urls="imageUrls"
-      :is-images-disappear="true"
-    />
+    <CustomImageTrailEffectBlock :image-urls="imageUrls" />
     <!-- <OriginalImageTrailEffectBlock /> -->
   </div>
   <div class="wrapper">
