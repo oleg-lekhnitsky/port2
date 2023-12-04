@@ -37,7 +37,7 @@ export const initTrailEffect = async (
       pointerCoordinates.y = event.offsetY;
     }
 
-    if (event instanceof TouchEvent) {
+    if (typeof TouchEvent !== "undefined" && event instanceof TouchEvent) {
       if (canvasRef.value) {
         const firstTouch = event.touches[0];
         const canvasBoundingClientRect =
