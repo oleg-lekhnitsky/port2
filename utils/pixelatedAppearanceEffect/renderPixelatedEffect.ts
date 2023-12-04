@@ -4,6 +4,7 @@ interface IRenderPixelatedEffectClosureArgs {
   canvasSizes: ISizes;
   pixelArray: Uint8ClampedArray;
   context: CanvasRenderingContext2D;
+  devicePixelRatio: number
 }
 
 export const renderPixelatedEffectClosure =

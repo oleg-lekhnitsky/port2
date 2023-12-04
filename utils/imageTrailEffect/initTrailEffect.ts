@@ -61,6 +61,7 @@ export const initTrailEffect = async (
       const drawingImage = getNewDrawingImage({
         imageElement,
         pointerCoordinates,
+        devicePixelRatio,
       });
 
       drawingImages.push(drawingImage);

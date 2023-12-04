@@ -100,6 +100,7 @@ export const initPixelatedAppearanceEffect = ({
       canvasSizes,
       context,
       pixelArray,
+      devicePixelRatio,
     });
 
     renderPixelatedEffect(START_PIXEL_SIZE);

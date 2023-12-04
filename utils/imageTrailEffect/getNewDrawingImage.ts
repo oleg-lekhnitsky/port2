@@ -10,11 +10,13 @@ import gsap from "gsap";
 interface IGetNewImageDrawingImage {
   imageElement: HTMLImageElement;
   pointerCoordinates: ICoordinates;
+  devicePixelRatio: number
 }
 
 export const getNewDrawingImage = ({
   imageElement,
   pointerCoordinates,
+  devicePixelRatio
 }: IGetNewImageDrawingImage): IDrawingImage => {
   const initialCoordinates: ICoordinates = {
     x: pointerCoordinates.x * devicePixelRatio,
