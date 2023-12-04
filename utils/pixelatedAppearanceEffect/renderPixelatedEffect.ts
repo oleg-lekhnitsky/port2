@@ -11,8 +11,17 @@ export const renderPixelatedEffectClosure =
   (inputTargetPixelSize: number) => {
     const targetPixelSize = inputTargetPixelSize * devicePixelRatio;
 
-    const fittedPixelsCount = Math.floor(canvasSizes.width / targetPixelSize);
-    const floatPixelSize = canvasSizes.width / fittedPixelsCount;
+    const fittedInWidthPixelsCount = Math.floor(
+      canvasSizes.width / targetPixelSize
+    );
+    const fittedInHeightPixelsCount = Math.floor(
+      canvasSizes.height / targetPixelSize
+    );
+
+    const floatPixelSize = {
+      width: canvasSizes.width / fittedInWidthPixelsCount,
+      height: canvasSizes.height / fittedInHeightPixelsCount,
+    };
 
     const sizesCompensationAccumulator = {
       width: 0,
@@ -34,7 +43,8 @@ export const renderPixelatedEffectClosure =
       y <= canvasSizes.height - targetPixelSize;
       y += targetPixelSize
     ) {
-      sizesCompensationAccumulator.height += floatPixelSize - targetPixelSize;
+      sizesCompensationAccumulator.height +=
+        floatPixelSize.height - targetPixelSize;
       sizesCompensationIntegerPart.height = Math.floor(
         sizesCompensationAccumulator.height
       );
@@ -54,7 +64,8 @@ export const renderPixelatedEffectClosure =
         x <= canvasSizes.width - targetPixelSize;
         x += targetPixelSize
       ) {
-        sizesCompensationAccumulator.width += floatPixelSize - targetPixelSize;
+        sizesCompensationAccumulator.width +=
+          floatPixelSize.width - targetPixelSize;
         sizesCompensationIntegerPart.width = Math.floor(
           sizesCompensationAccumulator.width
         );
