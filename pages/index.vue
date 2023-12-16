@@ -36,6 +36,7 @@
     <div class="temporaryGalleryContainer">
       <GalleryContainer>
         <div style="background-color: #f0f">
+          <br>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           accusamus ipsam soluta modi corporis minus vero nihil enim vitae,
           reprehenderit expedita. Fugit cumque recusandae pariatur dicta.

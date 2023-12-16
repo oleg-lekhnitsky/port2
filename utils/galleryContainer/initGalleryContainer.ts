@@ -20,6 +20,10 @@ export const initGalleryContainer = ({
     activeItemIndexRef.value = Math.floor(
       event.offsetX / effectSizes.hoverColumnWidth
     );
+
+    if (activeItemIndexRef.value === childrenCount) {
+      activeItemIndexRef.value = childrenCount - 1;
+    }
   };
 
   const setSizes = () => {
