@@ -74,7 +74,7 @@ const imageUrls = [...Array(8)].map(
 }
 
 .imageWithPixelatedAppearanceContainer {
-  width: 50vw;
+  width: 50%;
   height: 50vw;
 }
 
