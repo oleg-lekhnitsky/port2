@@ -36,7 +36,7 @@
     <div class="temporaryGalleryContainer">
       <GalleryContainer>
         <div style="background-color: #f0f">
-          <br>
+          <br />
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           accusamus ipsam soluta modi corporis minus vero nihil enim vitae,
           reprehenderit expedita. Fugit cumque recusandae pariatur dicta.
@@ -70,7 +70,7 @@ const imageUrls = [...Array(8)].map(
 <style lang="scss">
 .imageTrailEffectBlockContainer {
   height: calc(100 * var(--vh));
-  width: 100vw;
+  width: 100%;
 }
 
 .imageWithPixelatedAppearanceContainer {
