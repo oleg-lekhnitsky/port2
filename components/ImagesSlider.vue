@@ -52,6 +52,30 @@ const generateClassName = (index: number) => {
 	};
 };
 
+const generateItemStyle = (index: number) => {
+	const item = props.images[index];
+	const maxSize = 80;
+
+	if (index !== currentIndex.value) {
+		return {
+			backgroundColor: item.color,
+		};
+	}
+	if (item.aspectRatio > 1) {
+		return {
+			backgroundColor: item.color,
+			width: `${maxSize}vw`,
+			height: `calc(${maxSize}vw / ` + item.aspectRatio + ')',
+		};
+	} else {
+		return {
+			backgroundColor: item.color,
+			width: `calc(${maxSize}vh * ` + item.aspectRatio + ')',
+			height: `${maxSize}vh`,
+		};
+	}
+};
+
 </script>
 
 <template>
@@ -65,7 +89,7 @@ const generateClassName = (index: number) => {
 				v-for="(image, index) in props.images"
 				:key="index"
 				class="images-slider__item"
-				:style="{ backgroundColor: image.color }"
+				:style="generateItemStyle(index)"
 				:class="generateClassName(index)"
 				@transitionstart="transitionCount++"
 				@transitionend="transitionCount--"
@@ -125,23 +149,17 @@ const generateClassName = (index: number) => {
 	}
 
 	&__item {
-		--inline-size: 50dvw;
-		--block-size: 50dvh;
-
 		display: none;
 		position: absolute;
-		width: var(--inline-size);
-		height: var(--block-size);
-		object-fit: contain;
 
-		transition: width 1s ease, height 1s ease;
+		transition: width 0.75s ease, height 0.75s ease;
 		translate: -50% -50%;
 
 		&--next {
 			display: block;
 			z-index: 4;
-			width: calc(var(--inline-size) * 0);
-			height: calc(var(--block-size) * 0);
+			width: 0;
+			height: 0;
 		}
 
 		&--active {
