@@ -1,13 +1,13 @@
 <template>
   <div class="wrapper" style="position: fixed; top: 0; left: 0; z-index: 200000000;">
-    <a class="logo" href="/">Max Goncharenok</a>
+    <NuxtLink class="logo" to="/">Max Goncharenok</NuxtLink>
     <p class="title">Photographer based in Minsk</p>
     <div class="links" style="display: flex; flex-direction: column;">
-      <a href="">maxgelatin@gmail.com</a>
-      <a href="">Instagram</a>
+      <NuxtLink to="mailto:maxgelatin@gmail.com">maxgelatin@gmail.com</NuxtLink>
+      <NuxtLink to="https://www.instagram.com/maksgelatin">Instagram</NuxtLink>
     </div>
-    <a class="about" href="/about">About</a>
-    <a class="contact" href="">Contact</a>
+    <NuxtLink class="about" to="/about">About</NuxtLink>
+    <NuxtLink class="contact" to="/contact">Contact</NuxtLink>
   </div>
 </template>
 
@@ -35,7 +35,7 @@
     font-display: swap;
     letter-spacing: .03em;
     --bg: #fafafa;
-    --text: #171717;
+    --text-light: #171717;
     --accent: #0811EA;
   }
 
@@ -48,8 +48,8 @@
 
 
     a, p{
-      color: var(--text);
-      -webkit-text-stroke: 1px var(--text);
+      color: var(--text-light);
+      -webkit-text-stroke: 1px var(--text-light);
 
     }
     a:hover{

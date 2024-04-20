@@ -1,17 +1,5 @@
 <template>
   <div>
-    
+		<h1 style="margin-top: 60px">About</h1>
   </div>
 </template>
-
-<script lang="ts" setup>
-
-</script>
-
-<style scoped>
-
-header{
-  background-color: aqua  !important;
-}
-
-</style>

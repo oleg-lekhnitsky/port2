@@ -1,9 +1,11 @@
 @import 'modern-normalize/modern-normalize.css';
+@import 'transitions.scss';
 
 *{
   --bg-light: #fafafa;
   --bg-dark: #080808;
-  --text: #171717;
+  --text-light: #171717;
+	--text-dark: #f1f1f1;
   --accent: #0811EA;
   font-display: swap;
 }
@@ -18,7 +20,7 @@
 
 body {
   background-color: var(--bg-dark);
-  color: #f1f1f1;
+  color: var(--text-dark);
   font-family: Arial, sans-serif;
   margin: 0;
 }
