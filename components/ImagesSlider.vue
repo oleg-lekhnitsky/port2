@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useElementHover, useMouse } from '@vueuse/core';
+import { useElementHover, useMouse, useWindowSize } from '@vueuse/core';
 
 
 const props = defineProps<{
@@ -43,37 +43,65 @@ const goToPrev = () => {
 };
 
 // Classes
+const isActive = (index: number) => index === currentIndex.value;
+const isNext = (index: number) => index === currentIndex.value + 1 || (currentIndex.value === props.images.length - 1 && index === 0);
+const isPrev = (index: number) => index === currentIndex.value - 1 || (currentIndex.value === 0 && index === props.images.length - 1);
+const isPrevPrev = (index: number) => index === currentIndex.value - 2 || (currentIndex.value === 0 && index === props.images.length - 2) || (currentIndex.value === 1 && index === props.images.length - 1);
+
 const generateClassName = (index: number) => {
 	return {
-		'images-slider__item--active': index === currentIndex.value,
-		'images-slider__item--next': index === currentIndex.value + 1 || (currentIndex.value === props.images.length - 1 && index === 0),
-		'images-slider__item--prev': index === currentIndex.value - 1 || (currentIndex.value === 0 && index === props.images.length - 1),
-		'images-slider__item--prev-prev': index === currentIndex.value - 2 || (currentIndex.value === 0 && index === props.images.length - 2) || (currentIndex.value === 1 && index === props.images.length - 1),
+		'images-slider__item--active': isActive(index),
+		'images-slider__item--next': isNext(index),
+		'images-slider__item--prev': isPrev(index),
+		'images-slider__item--prev-prev': isPrevPrev(index),
 	};
 };
 
+const { width: windowWidth, height: windowHeight } = useWindowSize()
+const windowAspectRatio = computed(() => windowWidth.value / windowHeight.value);
+
 const generateItemStyle = (index: number) => {
 	const item = props.images[index];
-	const maxSize = 80;
+	const maxActiveSize = 90;
+	const minPrevSize = 100;
 
-	if (index !== currentIndex.value) {
-		return {
-			backgroundColor: item.color,
-		};
+
+	if (isActive(index)) {
+		if (item.aspectRatio > windowAspectRatio.value) {
+			return {
+				backgroundColor: item.color,
+				width: `${maxActiveSize}vw`,
+				height: `${maxActiveSize / item.aspectRatio}vw`,
+			};
+		} else {
+			return {
+				backgroundColor: item.color,
+				width: `${maxActiveSize * item.aspectRatio}vh`,
+				height: `${maxActiveSize}vh`,
+			};
+		}
+
 	}
-	if (item.aspectRatio > 1) {
-		return {
-			backgroundColor: item.color,
-			width: `${maxSize}vw`,
-			height: `calc(${maxSize}vw / ` + item.aspectRatio + ')',
-		};
-	} else {
-		return {
-			backgroundColor: item.color,
-			width: `calc(${maxSize}vh * ` + item.aspectRatio + ')',
-			height: `${maxSize}vh`,
-		};
+	if (isPrev(index) || isPrevPrev(index)) {
+		if (item.aspectRatio > windowAspectRatio.value) {
+			return {
+				backgroundColor: item.color,
+				width: `${minPrevSize * item.aspectRatio}vh`,
+				height: `${minPrevSize}vh`,
+			};
+		} else {
+			return {
+				backgroundColor: item.color,
+				width: `${minPrevSize}vw`,
+				height: `${minPrevSize / item.aspectRatio}vw`,
+			};
+		}
 	}
+
+
+	return {
+		backgroundColor: item.color,
+	};
 };
 
 </script>
@@ -170,15 +198,11 @@ const generateItemStyle = (index: number) => {
 		&--prev {
 			display: block;
 			z-index: 2;
-			width: 100dvw;
-			height: 100dvh;
 		}
 
 		&--prev-prev {
 			display: block;
 			z-index: 1;
-			width: 100dvw;
-			height: 100dvh;
 		}
 	}
 
