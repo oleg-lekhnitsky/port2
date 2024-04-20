@@ -15,12 +15,24 @@
 
 </script>
 
-<style scoped>
+<style lang="scss"  scoped>
+
+  @font-face {
+    font-family:'PPEditorialNew-Regular';
+    src: url(/assets/fonts/PPEditorialNew-Regular.woff2);
+  }
+
+  @font-face {
+    font-family:'PPEditorialNew-Italic';
+    src: url(/assets/fonts/PPEditorialNew-Italic.woff2);
+  }
+
   *{
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 400;
     font-family: 'PPEditorialNew-Regular', serif;
+    font-display: swap;
     letter-spacing: .03em;
     --bg: #fafafa;
     --text: #171717;

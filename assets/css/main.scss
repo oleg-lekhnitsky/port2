@@ -5,6 +5,15 @@
   --bg-dark: #080808;
   --text: #171717;
   --accent: #0811EA;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPEditorialNew-Regular', serif;
+   src: url("/fonts/PPEditorialNew-Regular.woff2") format('woff2');
+   font-style: normal;
+   font-weight: 400; 
+   
 }
 
 body {
