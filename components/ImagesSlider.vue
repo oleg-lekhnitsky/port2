@@ -1,12 +1,48 @@
 <script setup lang="ts">
+import { useElementHover, useMouse } from '@vueuse/core';
+
+
 const props = defineProps<{
 	images: ISliderImage[];
 }>();
-
 const currentIndex = defineModel<number>({
 	default: 0,
 });
 
+// Label
+const prevButtonElement = ref<HTMLButtonElement | null>(null);
+const nextButtonElement = ref<HTMLButtonElement | null>(null);
+const imagesSliderElement = ref<HTMLUListElement | null>(null);
+
+const isPrevButtonHovered = useElementHover(prevButtonElement);
+const isNextButtonHovered = useElementHover(nextButtonElement);
+const isImagesSliderHovered = useElementHover(imagesSliderElement);
+
+const label = computed(() => {
+	if (isPrevButtonHovered.value) return 'Previous';
+	if (isNextButtonHovered.value) return 'Next';
+	if (isImagesSliderHovered.value) return 'Zoom';
+	return '';
+});
+const {x: mouseX, y: mouseY} = useMouse()
+
+const labelX = computed(() => mouseX.value + 'px');
+const labelY = computed(() => mouseY.value + 'px');
+
+
+// Buttons
+const transitionCount = ref(0);
+
+const goToNext = () => {
+	if (transitionCount.value > 0) return;
+	currentIndex.value = currentIndex.value === props.images.length - 1 ? 0 : currentIndex.value + 1;
+};
+const goToPrev = () => {
+	if (transitionCount.value > 0) return;
+	currentIndex.value = currentIndex.value === 0 ? props.images.length - 1 : currentIndex.value - 1;
+};
+
+// Classes
 const generateClassName = (index: number) => {
 	return {
 		'images-slider__item--active': index === currentIndex.value,
@@ -15,36 +51,34 @@ const generateClassName = (index: number) => {
 		'images-slider__item--prev-prev': index === currentIndex.value - 2 || (currentIndex.value === 0 && index === props.images.length - 2) || (currentIndex.value === 1 && index === props.images.length - 1),
 	};
 };
-const goToNext = () => {
-	currentIndex.value = currentIndex.value === props.images.length - 1 ? 0 : currentIndex.value + 1;
-};
-const goToPrev = () => {
-	currentIndex.value = currentIndex.value === 0 ? props.images.length - 1 : currentIndex.value - 1;
-};
 
 </script>
 
 <template>
 	<div class="images-slider">
 		<div class="images-slider__controls">
-			<button class="images-slider__control" @click="goToPrev">Prev</button>
-			<button class="images-slider__control" @click="goToNext">Next</button>
+			<button class="images-slider__control images-slider__control--prev" @click="goToPrev" ref="prevButtonElement">Previous</button>
+			<button class="images-slider__control images-slider__control--next" @click="goToNext" ref="nextButtonElement">Next</button>
 		</div>
-		<ul class="images-slider__list">
+		<ul class="images-slider__list" ref="imagesSliderElement">
 			<li
 				v-for="(image, index) in props.images"
 				:key="index"
 				class="images-slider__item"
 				:style="{ backgroundColor: image.color }"
 				:class="generateClassName(index)"
+				@transitionstart="transitionCount++"
+				@transitionend="transitionCount--"
 			>
-				<img
+				<NuxtImg
 					:src="image.src"
 					:alt="image.alt"
 					class="images-slider__image"
+					loading="lazy"
 				/>
 			</li>
 		</ul>
+		<span class="images-slider__label">{{ label }}</span>
 	</div>
 
 </template>
@@ -69,12 +103,15 @@ const goToPrev = () => {
 	}
 
 	&__control {
-		border: 1px solid red;
 		font-size: 0;
 		opacity: 0;
 		user-select: none;
-		&:hover {
-			opacity: .05;
+
+		&--prev {
+			cursor: w-resize;
+		}
+		&--next {
+			cursor: e-resize;
 		}
 	}
 
@@ -86,6 +123,7 @@ const goToPrev = () => {
 		list-style: none;
 		display: flex;
 	}
+
 	&__item {
 		--inline-size: 50dvw;
 		--block-size: 50dvh;
@@ -105,16 +143,19 @@ const goToPrev = () => {
 			width: calc(var(--inline-size) * 0);
 			height: calc(var(--block-size) * 0);
 		}
+
 		&--active {
 			display: block;
 			z-index: 3;
 		}
+
 		&--prev {
 			display: block;
 			z-index: 2;
 			width: 100dvw;
 			height: 100dvh;
 		}
+
 		&--prev-prev {
 			display: block;
 			z-index: 1;
@@ -129,6 +170,26 @@ const goToPrev = () => {
 		height: 100%;
 		object-fit: cover;
 		display: block;
+	}
+
+	&__label {
+		&:empty {
+			display: none;
+		}
+		position: fixed;
+		display: block;
+		bottom: auto;
+		right: auto;
+		left: v-bind(labelX);
+		top: v-bind(labelY);
+		text-align: center;
+		width: fit-content;
+		background-color: rgba(0, 0, 0, .5);
+		transform: translate(-50%, 1em);
+		color: white;
+		padding: .5rem;
+		z-index: 10;
+		pointer-events: none;
 	}
 }
 </style>
