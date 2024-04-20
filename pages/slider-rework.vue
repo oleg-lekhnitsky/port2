@@ -1,4 +1,5 @@
 <template>
+  <!-- <AppHeader></AppHeader> -->
   <div class="display-button"></div>
   <div class="slider-wrapper">
     <div class="slider">
@@ -26,8 +27,8 @@
       </div>
     </div>
     
-    <button @click="previousSlide" :disabled="transitioning" class="prev-slide-btn slide-btn">Prev</button>
-    <button @click="nextSlide" :disabled="transitioning" class="next-slide-btn slide-btn">Next</button>
+    <button @click="previousSlide" :disabled="transitioning" class="prev-slide-btn slide-btn"></button>
+    <button @click="nextSlide" :disabled="transitioning" class="next-slide-btn slide-btn"></button>
     
   </div>
 </template>
@@ -165,10 +166,13 @@ img {
   border: none;
   color: white;
   font-size: 1.5rem;
-  cursor: pointer;
+  cursor: w-resize;
   z-index: 100;
   padding: 12px;
+  /* cursor: url('../img/1.png'), auto;	 */
 }
+
+
 .next-slide-btn {
   position: absolute;
   width: 50vw;
@@ -181,7 +185,7 @@ img {
   border: none;
   color: white;
   font-size: 1.5rem;
-  cursor: pointer;
+  cursor: e-resize;
   z-index: 100;
   padding: 12px;
 }
