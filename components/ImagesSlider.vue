@@ -19,8 +19,8 @@ const isNextButtonHovered = useElementHover(nextButtonElement);
 const isImagesSliderHovered = useElementHover(imagesSliderElement);
 
 const label = computed(() => {
-	if (isPrevButtonHovered.value) return 'Previous';
-	if (isNextButtonHovered.value) return 'Next';
+	if (isPrevButtonHovered.value) return '←Previous';
+	if (isNextButtonHovered.value) return 'Next→';
 	if (isImagesSliderHovered.value) return 'Zoom';
 	return '';
 });
@@ -160,10 +160,12 @@ const generateItemStyle = (index: number) => {
 		user-select: none;
 
 		&--prev {
-			cursor: w-resize;
+			// cursor: w-resize;
+			cursor: none;
 		}
 		&--next {
-			cursor: e-resize;
+			// cursor: e-resize;
+			cursor: none;
 		}
 	}
 
@@ -180,7 +182,7 @@ const generateItemStyle = (index: number) => {
 		display: none;
 		position: absolute;
 
-		transition: width 0.75s ease, height 0.75s ease;
+		transition: width 0.4s ease, height 0.4s ease;
 		translate: -50% -50%;
 
 		&--next {
@@ -226,11 +228,12 @@ const generateItemStyle = (index: number) => {
 		top: v-bind(labelY);
 		text-align: center;
 		width: fit-content;
-		background-color: rgba(0, 0, 0, .5);
+		background-color: #000000;
 		transform: translate(-50%, 1em);
 		color: white;
-		padding: .5rem;
+		padding: .35rem .25rem .05rem .25rem;
 		z-index: 10;
+		line-height: 87%;
 		pointer-events: none;
 	}
 }
