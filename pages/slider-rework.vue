@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       currentSlide: 0,
-      totalSlides: 8,
+      totalSlides: 29,
       transitioning: false,
     };
   },

@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper" style="position: fixed; top: 0; left: 0; z-index: 200000000;">
-    <NuxtLink class="logo" to="/">Max Goncharenok</NuxtLink>
+  <div class="header-wrapper" style="position: fixed; top: 0; left: 0; z-index: 200000000;">
+    <NuxtLink class="logo" to="/">Maks Goncharenok</NuxtLink>
     <p class="title">Photographer based in Minsk</p>
     <div class="links" style="display: flex; flex-direction: column;">
-      <NuxtLink to="mailto:maxgelatin@gmail.com">maxgelatin@gmail.com</NuxtLink>
+      <NuxtLink to="mailto:maxgelatin@gmail.com">maksgelatin@gmail.com</NuxtLink>
       <NuxtLink to="https://www.instagram.com/maksgelatin">Instagram</NuxtLink>
     </div>
     <NuxtLink class="about" to="/about">About</NuxtLink>
@@ -11,11 +11,13 @@
   </div>
 </template>
 
+
+
 <script lang="ts" setup>
 
 </script>
 
-<style lang="scss"  scoped>
+<style lang="scss">
 
   @font-face {
     font-family:'PPEditorialNew-Regular';
@@ -35,26 +37,26 @@
     font-display: swap;
     letter-spacing: .03em;
     --bg: #fafafa;
-    --text-light: #171717;
-    --accent: #0811EA;
+    --text-light: #fafafa;
+    --accent: #b0af72;
   }
 
-  .wrapper{
+  .header-wrapper{
     height: auto;
   }
 
-  .wrapper:hover{
+  .header-wrapper:hover{
     background-color: var(--bg);
 
 
     a, p{
-      color: var(--text-light);
-      -webkit-text-stroke: 1px var(--text-light);
+      color: var(--text-dark);
+      // -webkit-text-stroke: 1px var(--text-dark);
 
     }
     a:hover{
     color: var(--accent);
-    -webkit-text-stroke: 1px var(--accent);
+    // -webkit-text-stroke: 1px var(--accent);
 
     /* text-decoration-line: underline; */
   }
@@ -65,18 +67,19 @@
     color: white;
     width: fit-content;
     height: fit-content;
-    -webkit-text-stroke: .5px #fff;
+    // -webkit-text-stroke: .5px #fff;
   }
 
   p{
     margin: 0;
-    -webkit-text-stroke: .5px #fff;
+    // -webkit-text-stroke: .5px #fff;
+    color: var(--text-light);
     font-family: 'PPEditorialNew-Italic', serif;
   }
 
 
 
- .wrapper{
+ .header-wrapper{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
@@ -113,3 +116,4 @@
   top: 12px;
  }
 </style>
+

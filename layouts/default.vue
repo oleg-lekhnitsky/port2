@@ -9,8 +9,9 @@ nuxtApp.hook("page:finish", () => {
 
 <template>
 	<AppPreloader v-model="isLoading"/>
-	<AppHeader/>
+	
 	<div>
+		<AppHeader/>
 		<NuxtPage/>
 	</div>
 </template>

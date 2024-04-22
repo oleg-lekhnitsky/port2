@@ -25,11 +25,11 @@ const images = ref<ISliderImage[]>([
 		aspectRatio: 1,
 	},
 	{
-		src: 'https://fastly.picsum.photos/id/15/1000/500.jpg?hmac=FMDF2KdLRLNoCJZ2SKXtlZ4s5dLTNVuyHM3arShVl2k',
-		alt: 'Image 5',
-		color: '#578059',
-		aspectRatio: 2,
-	}
+		src: '/img/8.png',
+		alt: 'Image 4',
+		color: '#6a1d09',
+		aspectRatio: 1,
+	},
 ]);
 
 const currentIndex = ref(0);
