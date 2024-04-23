@@ -153,8 +153,7 @@ h2 {
   height: 15vw;
   transform: translateY(-15vw);
   z-index: 9999999999999;
-  animation: op .5  s ease;
-  inset-area: block-start;
+  animation: op .5s ease;
 }
 
 @keyframes op {
