@@ -9,7 +9,7 @@
 	--text-light: #fafafa;
   --accent: #0811EA;
   --grey: #e4e4e4;
-  
+  font-family: 'PPEditorialNew-Regular';
 }
 
 ::selection {
@@ -31,6 +31,15 @@
 }
 
 @font-face {
+  font-family: 'PPNeueMontreal-Medium';
+   src: url("@/assets/fonts/PPNeueMontreal-Medium.woff2") format('woff2');
+   font-style: normal;
+   font-weight: 400; 
+   font-display: swap;
+}
+
+
+@font-face {
   font-family: 'PPEditorialNew-Italic';
    src: url("@/assets/fonts/PPEditorialNew-Italic.woff2") format('woff2');
    font-style: italic;
@@ -41,10 +50,10 @@
 body {
   font-family: 'PPEditorialNew-Regular';
   background-color: var(--bg-light);
-  background-color: #c7c7c7;
   color: var(--text-dark);
   font-family: Arial, sans-serif;
   margin: 0;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6,li, a {
