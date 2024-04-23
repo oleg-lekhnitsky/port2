@@ -21,7 +21,7 @@
         
     </div> -->
 
-    <h3 class="heading sticky">I worked with</h3>
+    <h3 class="heading sticky">Worked with</h3>
     <div class="clients short">
       <NuxtLink id="nike" to="/clients/client4">Nike</NuxtLink>
       <NuxtLink id="zara" to="/clients/client4">Zara</NuxtLink>
@@ -153,10 +153,21 @@ h2 {
   height: 15vw;
   transform: translateY(-15vw);
   z-index: 9999999999999;
-  
+  animation: op .5  s ease;
+  inset-area: block-start;
 }
 
-
+@keyframes op {
+  0%{
+    rotate: -15deg;
+    opacity: 0;
+    
+  }
+  100%{
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
 
 #apple:hover::after {
   background-image: url('/public/img/12.png');
