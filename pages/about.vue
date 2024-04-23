@@ -61,8 +61,7 @@
 .heading {
     grid-column-start: 1;
   grid-column-end: 4;
-    font-size: 1rem;
-    color: #333;
+    font-size: 18px;
   }
 
   .clients {
@@ -102,12 +101,9 @@ h1 {
 }
 
 h2 {
-  // font-family: 'PPEditorialNew-Regular', serif;
   font-family: Helvetica, Arial, sans-serif;
   font-family: 'PPNeueMontreal-Medium';
   font-weight: 400;
-  // letter-spacing: -.02rem;
-  // font-size: 24px !important;
   font-size: 1.25rem;
   line-height: 1.2;
 }
