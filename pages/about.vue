@@ -1,27 +1,48 @@
 <template>
   <div class="wrapper-about">
     <div class="avatar"></div>
-    <h2 class="summary" style="margin-bottom: 120px;">With my camera in hand and a decade of commercial photography experience, I can help to tell your story in a visually stunning way. I specialize in capturing beauty of brands and individuals.</h2>
+    <h2 class="summary" style="margin-bottom: 120px;">With my camera in hand and a decade of commercial photography
+      experience, I can help to tell your story in a visually stunning way. I specialize in capturing beauty of brands
+      and individuals.</h2>
 
-    <h3 class="heading">Clients</h3>
+    <h3 class="heading ">Featured by</h3>
     <div class="clients short">
-      <NuxtLink to="/clients/client4">Zara</NuxtLink>    
+      <NuxtLink id="apple" to="/clients/client4">Apple</NuxtLink>
+      <NuxtLink to="/clients/client4">Adobe</NuxtLink>
+
+
+
+    </div>
+    <!-- <div class="clients long">
+      <NuxtLink to="/clients/client4">Vogue</NuxtLink>  
+        
+    </div> -->
+
+    <h3 class="heading sticky">I worked with</h3>
+    <div class="clients short">
+      <NuxtLink id="nike" to="/clients/client4">Nike</NuxtLink>
+      <NuxtLink id="zara" to="/clients/client4">Zara</NuxtLink>
       <NuxtLink to="/clients/client1">Samsung</NuxtLink>
       <NuxtLink to="/clients/client2">Xiaomi</NuxtLink>
+      <NuxtLink to="/clients/client1">Casio</NuxtLink>
       <NuxtLink to="/clients/client3">Honor</NuxtLink>
-      <NuxtLink to="/clients/client4">Pexels</NuxtLink>
       <NuxtLink to="/clients/client3">Oppo</NuxtLink>
-        
+      <NuxtLink to="/clients/client4">Dima Ermuzevich</NuxtLink>
+      <NuxtLink to="/clients/client4">Pexels</NuxtLink>
+      <NuxtLink to="/clients/client4">Stocksy</NuxtLink>
+      <NuxtLink to="/clients/client4">Life</NuxtLink>
+
     </div>
-    <div class="clients long">
+    <!-- <div class="clients long">
       <NuxtLink to="/clients/client1">Casio</NuxtLink>
       <NuxtLink to="/clients/client2">Stutterheim</NuxtLink>
       <NuxtLink to="/clients/client3">Mophie</NuxtLink>
       <NuxtLink to="/clients/client4">Dima Ermuzevich</NuxtLink>
       <NuxtLink to="/clients/client3">Pocket Rocket  </NuxtLink>
       <NuxtLink to="/clients/client4">Papa John’s</NuxtLink>
-    </div>
-
+      <NuxtLink to="/clients/client4">Life</NuxtLink>
+      <NuxtLink to="/clients/client4">Badoo</NuxtLink>
+    </div> -->
 
   </div>
 
@@ -43,7 +64,7 @@
   grid-column-end: 4;
   width: 4rem;
   height: 4rem;
-  background-image: url('/public/img/1.png');
+  background-image: url('/public/img/2.png');
   background-size: cover;
   background-position: center;
   border-radius: 999px;
@@ -55,58 +76,84 @@
   display: flex;
   align-items: flex-end;
   cursor: default;
-  
+
 }
 
 .heading {
-    grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 4;
-    font-size: 18px;
-  }
+  font-size: 18px;
+}
 
-  .clients {
+.clients {
 
-    display: flex;
-    flex-direction: column;
-    cursor: default;
-    font-size: 1rem;
-    line-height: 1.3;
-    a{
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  cursor: default;
+  font-size: 1rem;
+  line-height: 1.3;
+
+  a {
+    position: relative;
     color: var(--text-dark);
     text-decoration: none;
-    font-size: 4rem;
+    font-size: 8rem;
     line-height: 1.1;
-      letter-spacing: -.03rem;
+    letter-spacing: -.03rem;
   }
 
-  a:hover{
+  a:hover {
     color: var(--accent);
   }
-    
-  }
 
-  .short {
-    grid-column-start: 4;
-    grid-column-end: 7;
-  }
+}
 
-  .long {
-    grid-column-start: 7;
-    grid-column-end: 13;
-  }
+.short {
+  grid-column-start: 4;
+  grid-column-end: 12;
+}
+
+.long {
+  grid-column-start: 7;
+  grid-column-end: 13;
+}
 
 h1 {
   font-size: 2rem;
-  color: #333;
 }
 
 h2 {
   font-family: Helvetica, Arial, sans-serif;
   font-family: 'PPNeueMontreal-Medium';
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.2;
 }
 
+.clients a:hover::after {
+  content: "";
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 30%;
+  right: 0px;
+  height: 400px;
+  width: 400px;
+}
 
+
+
+#apple:hover::after {
+  background-image: url('/public/img/12.png');
+}
+
+#nike:hover::after {
+  background-image: url('/public/img/2.png');
+}
+
+#zara:hover::after {
+  background-image: url('/public/img/5.png');
+}
 </style>
