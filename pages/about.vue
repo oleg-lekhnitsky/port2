@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper-about">
     <div class="avatar"></div>
-    <h2 class="summary" style="margin-bottom: 120px;">With my camera in hand and a decade of commercial photography
+    <h2 class="summary">With my camera in hand and a decade of commercial photography
       experience, I can help to tell your story in a visually stunning way. I specialize in capturing beauty of brands
       and individuals.</h2>
 
@@ -77,6 +77,7 @@
   display: flex;
   align-items: flex-end;
   cursor: default;
+  padding-bottom: 80px;
 
 }
 
@@ -99,7 +100,7 @@
     position: relative;
     color: var(--text-dark);
     text-decoration: none;
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 1.1;
     letter-spacing: -.03rem;
   }
