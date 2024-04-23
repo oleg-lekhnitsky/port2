@@ -1,14 +1,17 @@
 <template>
+
   <div class="wrapper-about">
-    <div class="avatar"></div>
+
+    <!-- <div class="avatar"></div> -->
     <h2 class="summary">With my camera in hand and a decade of commercial photography
       experience, I can help to tell your story in a visually stunning way. I specialize in capturing beauty of brands
       and individuals.</h2>
-
+      <div class="bg-about" style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1; background-color: aqua;"></div>
     <h3 class="heading ">Featured by</h3>
     <div class="clients short">
       <NuxtLink id="apple" to="/clients/client4">Apple</NuxtLink>
       <NuxtLink id="adobe" to="/clients/client4">Adobe</NuxtLink>
+      <NuxtLink id="adobe" to="/clients/client4">Vogue</NuxtLink>
 
 
 
@@ -31,6 +34,10 @@
       <NuxtLink :to="'/clients/client4'" :id="'pexels'">Pexels</NuxtLink>
       <NuxtLink :to="'/clients/client4'" :id="'stocksy'">Stocksy</NuxtLink>
       <NuxtLink :to="'/clients/client4'" :id="'life'">Life</NuxtLink>
+      <NuxtLink to="/clients/client3">Mophie</NuxtLink>
+      <NuxtLink to="/clients/client3">Pocket Rocket  </NuxtLink>
+      <NuxtLink to="/clients/client4">Badoo</NuxtLink>
+      <NuxtLink to="/clients/client4">Papa John’s</NuxtLink>
 
 
     </div>
@@ -91,7 +98,7 @@
 
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  
   cursor: default;
   font-size: 1rem;
   line-height: 1.3;
@@ -138,11 +145,15 @@ h2 {
   background-image: none;
   background-size: cover;
   background-position: center;
-  position: fixed;
-  top: 30%;
-  right: 0px;
-  height: 400px;
-  width: 400px;
+  position: absolute;
+  
+  top: 20px;
+  left: 110%;
+  width: 15vw;
+  height: 15vw;
+  transform: translateY(-15vw);
+  z-index: 9999999999999;
+  
 }
 
 
@@ -162,5 +173,16 @@ h2 {
 
 #zara:hover::after {
   background-image: url('/public/img/5.png');
+}
+
+#samsung:hover::after {
+  background-image: url('/public/img/20.png');
+}
+
+.bg-about{
+  background-image: url('/public/img/cover-m.png');
+  background-size: cover;
+  background-position: right;
+  mix-blend-mode: multiply;
 }
 </style>

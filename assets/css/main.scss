@@ -12,14 +12,33 @@
   font-family: 'PPEditorialNew-Regular';
 }
 
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s cubic-bezier(0.68, 0.07, 0.68, 0.97);
+}
+
+.page-enter-from,
+.page-leave-to {
+  // transform: translateY(70px);
+  opacity: 0;
+  margin-top: 70px;
+  /* filter: blur(1rem); */
+}
+
 ::selection {
   background-color: var(--grey);
   color: var(--text-dark);
 }
 
-::-webkit-scrollbar{
-  width: 10px;
-  color: var(--bg-dark);
+::-webkit-scrollbar {
+  background: var(--bg-light);
+  color: var(--bg-light);
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--bg-dark);
 }
 
 @font-face {
