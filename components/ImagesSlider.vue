@@ -62,7 +62,7 @@ const windowAspectRatio = computed(() => windowWidth.value / windowHeight.value)
 
 const generateItemStyle = (index: number) => {
 	const item = props.images[index];
-	const maxActiveSize = 90;
+	const maxActiveSize = 80;
 	const minPrevSize = 100;
 
 
@@ -127,6 +127,7 @@ const generateItemStyle = (index: number) => {
 					:alt="image.alt"
 					class="images-slider__image"
 					loading="lazy"
+					format="webp"
 				/>
 			</li>
 		</ul>
