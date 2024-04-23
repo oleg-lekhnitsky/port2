@@ -8,7 +8,7 @@
     <h3 class="heading ">Featured by</h3>
     <div class="clients short">
       <NuxtLink id="apple" to="/clients/client4">Apple</NuxtLink>
-      <NuxtLink to="/clients/client4">Adobe</NuxtLink>
+      <NuxtLink id="adobe" to="/clients/client4">Adobe</NuxtLink>
 
 
 
@@ -22,15 +22,16 @@
     <div class="clients short">
       <NuxtLink id="nike" to="/clients/client4">Nike</NuxtLink>
       <NuxtLink id="zara" to="/clients/client4">Zara</NuxtLink>
-      <NuxtLink to="/clients/client1">Samsung</NuxtLink>
-      <NuxtLink to="/clients/client2">Xiaomi</NuxtLink>
-      <NuxtLink to="/clients/client1">Casio</NuxtLink>
-      <NuxtLink to="/clients/client3">Honor</NuxtLink>
-      <NuxtLink to="/clients/client3">Oppo</NuxtLink>
-      <NuxtLink to="/clients/client4">Dima Ermuzevich</NuxtLink>
-      <NuxtLink to="/clients/client4">Pexels</NuxtLink>
-      <NuxtLink to="/clients/client4">Stocksy</NuxtLink>
-      <NuxtLink to="/clients/client4">Life</NuxtLink>
+      <NuxtLink :to="'/clients/client1'" :id="'samsung'">Samsung</NuxtLink>
+      <NuxtLink :to="'/clients/client2'" :id="'xiaomi'">Xiaomi</NuxtLink>
+      <NuxtLink :to="'/clients/client1'" :id="'casio'">Casio</NuxtLink>
+      <NuxtLink :to="'/clients/client3'" :id="'honor'">Honor</NuxtLink>
+      <NuxtLink :to="'/clients/client3'" :id="'oppo'">Oppo</NuxtLink>
+      <NuxtLink :to="'/clients/client4'" :id="'dima-ermuzevich'">Dima Ermuzevich</NuxtLink>
+      <NuxtLink :to="'/clients/client4'" :id="'pexels'">Pexels</NuxtLink>
+      <NuxtLink :to="'/clients/client4'" :id="'stocksy'">Stocksy</NuxtLink>
+      <NuxtLink :to="'/clients/client4'" :id="'life'">Life</NuxtLink>
+
 
     </div>
     <!-- <div class="clients long">
@@ -98,7 +99,7 @@
     position: relative;
     color: var(--text-dark);
     text-decoration: none;
-    font-size: 8rem;
+    font-size: 6rem;
     line-height: 1.1;
     letter-spacing: -.03rem;
   }
@@ -148,6 +149,11 @@ h2 {
 #apple:hover::after {
   background-image: url('/public/img/12.png');
 }
+
+#adobe:hover::after {
+  background-image: url('/public/img/16.png');
+}
+
 
 #nike:hover::after {
   background-image: url('/public/img/2.png');
