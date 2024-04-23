@@ -75,7 +75,7 @@
     a{
     color: var(--text-dark);
     text-decoration: none;
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.1;
       letter-spacing: -.03rem;
   }
