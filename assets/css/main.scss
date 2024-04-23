@@ -2,12 +2,14 @@
 @import 'transitions.scss';
 
 *{
+  box-sizing: border-box;
   --bg-light: #fafafa;
   --bg-dark: #080808;
   --text-dark: #171717;
 	--text-light: #fafafa;
   --accent: #0811EA;
   --grey: #e4e4e4;
+  
 }
 
 ::selection {
@@ -37,10 +39,23 @@
 }
 
 body {
+  font-family: 'PPEditorialNew-Regular';
   background-color: var(--bg-light);
+  background-color: #c7c7c7;
   color: var(--text-dark);
   font-family: Arial, sans-serif;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6,li, a {
+  font-family: 'PPEditorialNew-Regular';
+  font-weight: 400;
+  margin: 0;
+}
+
+
+a{
+  text-decoration: none;
 }
 
 .wrapper {

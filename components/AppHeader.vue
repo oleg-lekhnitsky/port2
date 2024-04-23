@@ -29,24 +29,15 @@
     src: url(/assets/fonts/PPEditorialNew-Italic.woff2);
   }
 
-  *{
-    box-sizing: border-box;
-    text-decoration: none;
-    font-weight: 400;
-    font-family: 'PPEditorialNew-Regular', serif;
-    font-display: swap;
-    letter-spacing: .03em;
-    --bg: #fafafa;
-    --text-light: #fafafa;
-    --accent: #b0af72;
-  }
+
 
   .header-wrapper{
     height: auto;
+    font-family: 'PPEditorialNew-Regular', serif;
   }
 
   .header-wrapper:hover{
-    background-color: var(--bg);
+    background-color: var(--bg-light);
 
 
     a, p{
