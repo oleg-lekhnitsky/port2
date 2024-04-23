@@ -22,15 +22,15 @@
 
 @font-face {
   font-family: 'PPEditorialNew-Regular';
-   src: url("/fonts/PPEditorialNew-Regular.woff2") format('woff2');
+   src: url("@/assets/fonts/PPEditorialNew-Regular.woff2") format('woff2');
    font-style: normal;
    font-weight: 400; 
    font-display: swap;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew-Regular';
-   src: url("/fonts/PPEditorialNew-Italic.woff2") format('woff2');
+  font-family: 'PPEditorialNew-Italic';
+   src: url("@/assets/fonts/PPEditorialNew-Italic.woff2") format('woff2');
    font-style: italic;
    font-weight: 400; 
    font-display: swap;

@@ -139,8 +139,8 @@ const generateItemStyle = (index: number) => {
 <style scoped lang="scss">
 .images-slider {
 	position: relative;
-	width: 100dvw;
-	height: 100dvh;
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
 	display: grid;
 	place-items: center;

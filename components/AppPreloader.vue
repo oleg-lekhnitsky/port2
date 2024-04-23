@@ -28,7 +28,7 @@ const isLoading = defineModel({
 	</Transition>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .app-loader {
 	font-family: 'PPEditorialNew-Regular', serif;
 	position: fixed;
