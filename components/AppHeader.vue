@@ -5,8 +5,8 @@
     <div class="links" style="display: flex; flex-direction: column;">
       <NuxtLink to="mailto:maxgelatin@gmail.com">maksgelatin@gmail.com</NuxtLink>
       <div style="display: flex; gap: 2px">
-      <NuxtLink to="https://www.instagram.com/maksgelatin">Instagram,  </NuxtLink>
-      <NuxtLink to="https://www.t.me/maksgelatin">Telegram</NuxtLink>
+      <NuxtLink to="https://www.instagram.com/maksgelatin" target="_blank">Instagram,  </NuxtLink>
+      <NuxtLink to="https://www.t.me/maksgelatin" target="_blank">Telegram</NuxtLink>
     </div>
     </div>
     <NuxtLink class="gallery" to="/gallery">Gallery</NuxtLink>
