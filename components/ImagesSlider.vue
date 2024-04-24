@@ -12,7 +12,7 @@ const currentIndex = defineModel<number>({
 // Label
 const prevButtonElement = ref<HTMLButtonElement | null>(null);
 const nextButtonElement = ref<HTMLButtonElement | null>(null);
-const imagesSliderElement = ref<HTMLUListElement | null>(null);
+const imagesSliderElement = ref<HTMLUListElement | null>(null);	
 
 const isPrevButtonHovered = useElementHover(prevButtonElement);
 const isNextButtonHovered = useElementHover(nextButtonElement);

@@ -8,7 +8,7 @@ const isLoading = defineModel({
 </script>
 
 <template>
-	<Transition name="fade" duration="2000">
+	<Transition name="fade" duration="4000">
 		<div class="app-loader" v-if="isLoading">
 			<!-- Max Goncharenok
 				
@@ -30,7 +30,6 @@ const isLoading = defineModel({
 
 <style lang="scss">
 .app-loader {
-	font-family: 'PPEditorialNew-Regular', serif;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -45,5 +44,24 @@ const isLoading = defineModel({
 	color: var(--text-dark);
 	font-size: 48px;
 	-webkit-text-stroke: 1px var(--text-dark);
+
+	svg{
+		animation: blur 2s ease infinite;
+		animation-delay: 1s;
+	}
+
+	@keyframes blur {
+		0%{
+			filter: blur(0px);
+		}
+
+		50%{
+			filter: blur(10px);
+		}
+
+		100%{
+			filter: blur(0px);
+		}
+	}
 }
 </style>
