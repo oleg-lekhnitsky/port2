@@ -158,13 +158,13 @@ h2 {
 
 @keyframes op {
   0%{
-    rotate: -15deg;
     opacity: 0;
+    transform: translateY(-12vw);
     
   }
   100%{
     opacity: 1;
-    rotate: 0deg;
+    transform: translateY(-15vw);
   }
 }
 
