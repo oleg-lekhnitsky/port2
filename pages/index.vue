@@ -3,7 +3,7 @@ const images = ref<ISliderImage[]>([
 	{
 		src: '/img/20.png',
 		alt: 'Image 1',
-		color: '#5892b5',
+		color: '#F97600',
 		aspectRatio: .8,
 	},
 	{
@@ -27,7 +27,7 @@ const images = ref<ISliderImage[]>([
 	{
 		src: '/img/8.png',
 		alt: 'Image 4',
-		color: '#6a1d09',
+		color: '#999999',
 		aspectRatio: 1,
 	},
 ]);
