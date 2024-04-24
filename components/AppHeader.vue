@@ -1,13 +1,16 @@
 <template>
   <div class="header-wrapper" style="position: fixed; top: 0; left: 0; z-index: 200000000;">
     <NuxtLink class="logo" to="/">Maks Goncharenok</NuxtLink>
-    <p class="title">Photographer based in Minsk</p>
+    <p class="title">Photographer (brands+personal)</p>
     <div class="links" style="display: flex; flex-direction: column;">
       <NuxtLink to="mailto:maxgelatin@gmail.com">maksgelatin@gmail.com</NuxtLink>
-      <NuxtLink to="https://www.instagram.com/maksgelatin">Instagram</NuxtLink>
+      <div style="display: flex; gap: 2px">
+      <NuxtLink to="https://www.instagram.com/maksgelatin">Instagram,  </NuxtLink>
+      <NuxtLink to="https://www.t.me/maksgelatin">Telegram</NuxtLink>
     </div>
+    </div>
+    <NuxtLink class="gallery" to="/gallery">Gallery</NuxtLink>
     <NuxtLink class="about" to="/about">About</NuxtLink>
-    <NuxtLink class="contact" to="/contact">Contact</NuxtLink>
   </div>
 </template>
 
@@ -19,15 +22,6 @@
 
 <style lang="scss">
 
-  @font-face {
-    font-family:'PPEditorialNew-Regular';
-    src: url(/assets/fonts/PPEditorialNew-Regular.woff2);
-  }
-
-  @font-face {
-    font-family:'PPEditorialNew-Italic';
-    src: url(/assets/fonts/PPEditorialNew-Italic.woff2);
-  }
 
 
 
@@ -93,16 +87,19 @@
  }
 
  .links{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   grid-column-start: 7;
   grid-column-end: 10;
  }
 
- .about{
+ .gallery{
   grid-column-start: 10;
   grid-column-end: 13;
  }
 
- .contact{
+ .about{
   position: absolute;
   right: 12px;
   top: 12px;

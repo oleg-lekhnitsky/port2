@@ -3,10 +3,16 @@
   <div class="wrapper-about">
 
     <!-- <div class="avatar"></div> -->
-    <h2 class="summary">With my camera in hand and a decade of commercial photography
+    <h2 class="summary">
+      
+      With my camera in hand and a decade of commercial photography
       experience, I can help to tell your story in a visually stunning way. I specialize in capturing beauty of brands
-      and individuals.</h2>
-      <div class="bg-about" style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1; background-color: aqua;"></div>
+      and individuals.
+      <br>
+      Currently in [Minsk, Belarus] </h2>
+    <div class="bg-about"
+      style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1; background-color: aqua;">
+    </div>
     <h3 class="heading ">Featured by</h3>
     <div class="clients short">
       <NuxtLink id="apple" to="/clients/client4">Apple</NuxtLink>
@@ -98,7 +104,7 @@
 
   display: flex;
   flex-direction: column;
-  
+
   cursor: default;
   font-size: 1rem;
   line-height: 1.3;
@@ -146,7 +152,7 @@ h2 {
   background-size: cover;
   background-position: center;
   position: absolute;
-  
+
   top: 20px;
   left: 110%;
   width: 15vw;
@@ -157,12 +163,13 @@ h2 {
 }
 
 @keyframes op {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-12vw);
     filter: blur(14px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translateY(-15vw);
     filter: blur(0px);
@@ -190,7 +197,7 @@ h2 {
   background-image: url('/public/img/20.png');
 }
 
-.bg-about{
+.bg-about {
   background-image: url('/public/img/cover-m.png');
   background-size: cover;
   background-position: right;
