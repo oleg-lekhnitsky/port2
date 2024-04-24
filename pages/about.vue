@@ -160,11 +160,12 @@ h2 {
   0%{
     opacity: 0;
     transform: translateY(-12vw);
-    
+    filter: blur(14px);
   }
   100%{
     opacity: 1;
     transform: translateY(-15vw);
+    filter: blur(0px);
   }
 }
 

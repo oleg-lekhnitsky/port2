@@ -7,21 +7,21 @@
   --bg-dark: #080808;
   --text-dark: #171717;
 	--text-light: #fafafa;
-  --accent: #f33f8a;
+  --accent: #e26fa3;
   --grey: #e4e4e4;
   font-family: 'PPEditorialNew-Regular';
 }
 
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.5s cubic-bezier(0.68, 0.07, 0.68, 0.97);
+  transition: all 0.6s ease;
 }
 
 .page-enter-from,
 .page-leave-to {
   // transform: translateY(70px);
   opacity: 0;
-  margin-top: 70px;
+  
   /* filter: blur(1rem); */
 }
 
