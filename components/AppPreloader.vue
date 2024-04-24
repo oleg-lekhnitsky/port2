@@ -46,7 +46,7 @@ const isLoading = defineModel({
 	-webkit-text-stroke: 1px var(--text-dark);
 
 	svg{
-		animation: blur 2s ease infinite;
+		animation: blur 3s ease ;
 		animation-delay: 1s;
 	}
 
@@ -57,6 +57,14 @@ const isLoading = defineModel({
 
 		50%{
 			filter: blur(10px);
+		}
+		
+		70%{
+			filter: blur(2px);
+		}
+
+		77%{
+			filter: blur(7px);
 		}
 
 		100%{
