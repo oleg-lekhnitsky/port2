@@ -38,8 +38,9 @@ onMounted(() => {
 $canvas-background: #fff;
 
 .effectCanvasContainer {
-  width: 100%;
-  height: 100%;
+  object-fit: fill;
+  width: min-content;
+  height: min-content;
   background: $canvas-background;
 }
 </style>

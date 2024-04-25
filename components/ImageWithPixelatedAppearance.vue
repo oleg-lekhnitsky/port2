@@ -1,7 +1,7 @@
 <template>
   <div class="container" ref="containerRef">
     <LazyNuxtImg ref="imageRef" class="imageElement" v-bind="props" />
-    <canvas ref="canvasRef" class="canvas"></canvas>
+    <!-- <canvas ref="canvasRef" class="canvas"></canvas> -->
   </div>
 </template>
 
@@ -34,8 +34,9 @@ onUnmounted(handleUnmount);
 .canvas,
 .imageElement {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
+
 
 .imageElement,
 .canvas {
@@ -44,11 +45,27 @@ onUnmounted(handleUnmount);
   left: 0;
 }
 
-.canvas {
-  pointer-events: none;
-}
+
 
 .imageElement {
   object-fit: cover;
+  position: relative;
+}
+
+.container{
+  object-fit: contain;
+  position: relative;
+
+}
+
+.canvas {
+  object-fit: contain;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: auto;
 }
 </style>

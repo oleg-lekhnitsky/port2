@@ -27,7 +27,6 @@
 
   .header-wrapper{
     height: auto;
-    font-family: 'PPEditorialNew-Regular', serif;
     
   }
 
