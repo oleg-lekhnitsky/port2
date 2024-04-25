@@ -1,46 +1,58 @@
+
 <template>
 
   <!-- <div>
     <h1>Hello</h1>
   </div> -->
 
-  <div class="wrapper"
-    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; flex-direction: column; padding: 60px 12px;">
+  <div class="wrapper" 
+    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; flex-direction: column; padding: 120px 12px; overflow: hidden; max-width: 100vw; box-sizing: border-box;">
 
-    <ImageWithPixelatedAppearance src="/img/1.png" alt="Discover Nuxt 3" />
+    <h1>2024</h1>
+    <NuxtImg src="/img/3.png" format="webp" alt="Discover Nuxt 3" :placeholder="[]"/>
+    <NuxtImg class="" src="/img/15.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]"/>
+    <NuxtImg src="/img/13.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
+    
 
-    <ImageWithPixelatedAppearance src="/img/13.png" alt="Discover Nuxt 3" />
+    <NuxtImg src="/img/4.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
+<h1>2023</h1>
+    <NuxtImg src="/img/5.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
 
-    <ImageWithPixelatedAppearance src="/img/3.png" alt="Discover Nuxt 3" />
+    <NuxtImg src="/img/19.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
 
-    <ImageWithPixelatedAppearance src="/img/4.png" alt="Discover Nuxt 3" />
+    <NuxtImg src="/img/22.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
 
-    <ImageWithPixelatedAppearance src="/img/5.png" alt="Discover Nuxt 3" />
+    <NuxtImg src="/img/8.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
 
-    <ImageWithPixelatedAppearance src="/img/19.png" alt="Discover Nuxt 3" />
+    <NuxtImg src="/img/28.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]"/>
 
-    <ImageWithPixelatedAppearance src="/img/22.png" alt="Discover Nuxt 3" />
+    <NuxtImg src="/img/14.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]"/>
+<h1>2022</h1>
+<NuxtImg src="/img/9.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
 
-    <ImageWithPixelatedAppearance src="/img/8.png" alt="Discover Nuxt 3" />
+<NuxtImg src="/img/25.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
 
+<NuxtImg src="/img/21.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
+
+<NuxtImg src="/img/8.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
   </div>
 
 </template>
 
-<script setup lang="ts">
-// import CustomImageTrailEffectBlock from "~/components/CustomImageTrailEffectBlock.vue";
-// import ImageWithPixelatedAppearance from "~/components/ImageWithPixelatedAppearance.vue";
-// import GalleryContainer from "~/components/GalleryContainer.vue";
-// import OriginalImageTrailEffectBlock from "~/components/OriginalImageTrailEffectBlock.vue";
 
-const imageUrls = [...Array(8)].map(
-  (_, index) => `/trail-effect-pictures/${index + 1}.jpg`
-);
-</script>
 
 <style lang="scss">
 
+.NuxtImg{
+  height: auto;
+  width: 100%;
+  min-width: 100%;
+  min-height: 200px;
+}
 
+caption{
+  text-align: center;
+}
 
 
 </style>

@@ -139,7 +139,6 @@ h1 {
 }
 
 h2 {
-  font-family: Helvetica, Arial, sans-serif;
   font-family: 'PPNeueMontreal-Medium';
   font-weight: 400;
   font-size: 1.15rem;

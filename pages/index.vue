@@ -39,3 +39,4 @@ const currentIndex = ref(0);
 <template>
 	<ImagesSlider :images="images" v-model="currentIndex"/>
 </template>
+

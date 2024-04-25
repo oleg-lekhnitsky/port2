@@ -128,6 +128,7 @@ const generateItemStyle = (index: number) => {
 					class="images-slider__image"
 					loading="lazy"
 					format="webp"
+					:placeholder="[5]" 
 				/>
 			</li>
 		</ul>

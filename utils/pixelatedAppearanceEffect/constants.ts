@@ -1,6 +1,0 @@
-export const START_PIXEL_SIZE = 8;
-export const ANIMATION_PROPERTIES = {
-  DURATION: 0.05,
-  DELAY: 0.01,
-  STEPS_COUNT: 8,
-};

@@ -1,1 +1,0 @@
-export { initGalleryContainer } from "./initGalleryContainer";

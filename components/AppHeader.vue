@@ -27,7 +27,8 @@
 
   .header-wrapper{
     height: auto;
-    
+    background-color: var(--bg-light);
+    color: var(--text-dark);
   }
 
   .header-wrapper:hover{
@@ -49,7 +50,7 @@
   }
 
   a{
-    color: white;
+    color: var(--text-dark);
     width: fit-content;
     height: fit-content;
     // -webkit-text-stroke: .5px #fff;
@@ -58,8 +59,9 @@
   p{
     margin: 0;
     // -webkit-text-stroke: .5px #fff;
-    color: var(--text-light);
-    font-family: 'PPEditorialNew-Italic', serif;
+    color: var(--text-dark);
+    font-family: 'PPEditorialNew-Italic';
+    font-style: italic;
   }
 
 
@@ -83,6 +85,7 @@
   grid-column-start: 4;
   grid-column-end: 7;
   cursor: default;
+  
  }
 
  .links{
