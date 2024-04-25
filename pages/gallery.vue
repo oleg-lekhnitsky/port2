@@ -1,6 +1,6 @@
 
 <template>
-
+<AppHeader></AppHeader>
   <!-- <div>
     <h1>Hello</h1>
   </div> -->
@@ -41,7 +41,7 @@
 
 
 
-<style lang="scss">
+<style lang="scss" >
 
 .NuxtImg{
   height: auto;
@@ -54,5 +54,27 @@ caption{
   text-align: center;
 }
 
+
+
+
+</style>
+
+
+<style lang="scss" scoped>
+  .header-wrapper{
+    height: auto;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+
+	*{
+      color: var(--text-dark);
+      // -webkit-text-stroke: 1px var(--text-dark);
+
+    }
+  }
+
+
+
+  
 
 </style>

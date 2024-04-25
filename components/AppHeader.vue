@@ -50,7 +50,7 @@
   }
 
   a{
-    color: var(--text-dark);
+    color: var(--text-light);
     width: fit-content;
     height: fit-content;
     // -webkit-text-stroke: .5px #fff;
@@ -59,7 +59,7 @@
   p{
     margin: 0;
     // -webkit-text-stroke: .5px #fff;
-    color: var(--text-dark);
+    color: var(--text-light);
     font-family: 'PPEditorialNew-Italic';
     font-style: italic;
   }

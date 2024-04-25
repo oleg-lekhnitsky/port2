@@ -1,5 +1,5 @@
 <template>
-
+  <AppHeader></AppHeader>
   <div class="wrapper-about">
 
     <!-- <div class="avatar"></div> -->
@@ -202,4 +202,23 @@ h2 {
   background-position: right;
   mix-blend-mode: multiply;
 }
+</style>
+
+<style lang="scss" scoped>
+  .header-wrapper{
+    height: auto;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+
+	*{
+      color: var(--text-dark);
+      // -webkit-text-stroke: 1px var(--text-dark);
+
+    }
+  }
+
+
+
+  
+
 </style>

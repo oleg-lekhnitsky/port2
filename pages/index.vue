@@ -37,6 +37,39 @@ const currentIndex = ref(0);
 </script>
 
 <template>
+	<AppHeader></AppHeader>
 	<ImagesSlider :images="images" v-model="currentIndex"/>
 </template>
 
+<style lang="scss" scoped>
+  .header-wrapper{
+    height: auto;
+    background-color: transparent;
+    color: var(--text-light);
+
+	a, p{
+      color: var(--text-light);
+      // -webkit-text-stroke: 1px var(--text-dark);
+
+    }
+  }
+
+  .header-wrapper:hover{
+    background-color: var(--bg-light);
+
+
+    a, p{
+      color: var(--text-dark);
+      // -webkit-text-stroke: 1px var(--text-dark);
+
+    }
+    a:hover{
+    color: var(--accent);
+    // -webkit-text-stroke: 1px var(--accent);
+
+    /* text-decoration-line: underline; */
+  }
+
+  }
+
+</style>
