@@ -3,7 +3,7 @@
 
 *{
   box-sizing: border-box;
-  --bg-light: #fafafa;
+  --bg-light: #f6f6f6;
   --bg-dark: #080808;
   --text-dark: #171717;
 	--text-light: #fafafa;
@@ -14,16 +14,16 @@
 
 .page-enter-active,
 .page-leave-active {
-  transition: all 1.6s ease;
+  transition: all 1.0s ease-in-out;  
 }
 
 .page-enter-from,
 .page-leave-to {
   // transform: translateZ(70px);
   opacity: 0;
-  transition: all 1.6s ease;
+  // transition: all 1.6s ease;
   
-  /* filter: blur(1rem); */
+  filter: blur(1rem);
 }
 
 ::selection {

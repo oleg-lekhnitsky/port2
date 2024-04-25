@@ -37,8 +37,10 @@ const currentIndex = ref(0);
 </script>
 
 <template>
+	<div>
 	<AppHeader></AppHeader>
 	<ImagesSlider :images="images" v-model="currentIndex"/>
+</div>
 </template>
 
 <style lang="scss" scoped>

@@ -20,7 +20,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 
 
@@ -72,6 +72,7 @@
   width: 100%;
   gap: 8px;
   padding: 12px;
+  height: auto;
  }
 
  .logo {

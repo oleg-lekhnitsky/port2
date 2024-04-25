@@ -1,6 +1,8 @@
 <template>
-  <AppHeader></AppHeader>
+  <div>
+    <AppHeader></AppHeader>
   <div class="wrapper-about">
+   
 
     <!-- <div class="avatar"></div> -->
     <h2 class="summary">
@@ -11,7 +13,7 @@
       <br>
       Currently in [Minsk, Belarus] </h2>
     <div class="bg-about"
-      style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1; background-color: aqua;">
+      style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1;">
     </div>
     <h3 class="heading ">Featured by</h3>
     <div class="clients short">
@@ -59,18 +61,19 @@
     </div> -->
 
   </div>
-
+</div>
 </template>
 
 
 <style lang="scss">
 .wrapper-about {
-  margin-top: 102px;
+  padding: 12px;
+  padding-top: 120px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   gap: 8px;
-  padding: 12px;
+
 }
 
 .avatar {
@@ -116,6 +119,7 @@
     font-size: 5rem;
     line-height: 1.1;
     letter-spacing: -.03rem;
+    width: fit-content;
   }
 
   a:hover {
@@ -153,7 +157,7 @@ h2 {
   position: absolute;
 
   top: 20px;
-  left: 110%;
+  left: 102%;
   width: 15vw;
   height: 15vw;
   transform: translateY(-15vw);
@@ -205,8 +209,9 @@ h2 {
 </style>
 
 <style lang="scss" scoped>
+
   .header-wrapper{
-    height: auto;
+    height: auto !important;
     background-color: var(--bg-light);
     color: var(--text-dark);
 
@@ -216,9 +221,5 @@ h2 {
 
     }
   }
-
-
-
-  
 
 </style>
