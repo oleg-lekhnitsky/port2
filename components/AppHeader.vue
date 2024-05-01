@@ -70,7 +70,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
-  gap: 8px;
+  gap: 0px;
   padding: 12px;
   height: auto;
  }

@@ -8,7 +8,7 @@ const isLoading = defineModel({
 </script>
 
 <template>
-	<Transition name="fade" duration="4000">
+	<Transition name="fade" >
 		<div class="app-loader" v-if="isLoading">
 			<!-- Max Goncharenok
 				
