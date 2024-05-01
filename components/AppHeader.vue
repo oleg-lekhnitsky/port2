@@ -1,6 +1,5 @@
 <template>
   <div class="header-wrapper">
-
     <NuxtLink class="logo" to="/">Maks Goncharenok</NuxtLink>
     <p class="title" :class="{ 'menu-open': isMenuOpen }">Photographer (brands+personal)</p>
     <div class="links" :class="{ 'menu-open': isMenuOpen }">
@@ -14,15 +13,10 @@
     <NuxtLink class="about" :class="{ 'menu-open': isMenuOpen }" to="/about">About</NuxtLink>
 
     <button style="position: absolute; top: 0; right: 0; z-index: 9;" class="toggle-menu-btn"
-      @click="toggleMenu">Menu</button>
-    <div class="mobile-header-bg" :class="{ 'menu-open': isMenuOpen }">
-
-    </div>
+      @click="toggleMenu">{{ isMenuOpen ? 'Menu' : 'Close' }}</button>
+    <div class="mobile-header-bg" :class="{ 'menu-open': isMenuOpen }"></div>
   </div>
-
 </template>
-
-
 
 <script setup>
 import { ref } from 'vue';
@@ -35,6 +29,7 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 </script>
+
 
 <style lang="scss" scoped>
 .header-wrapper {
@@ -159,12 +154,6 @@ p {
 
   .title {
     padding-top: 20%;
-    color: var(--text-dark);
-    align-items: flex-end;
-    grid-column-start: 4;
-    grid-column-end: 7;
-    cursor: default;
-
   }
 
 
