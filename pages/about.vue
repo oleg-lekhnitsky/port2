@@ -1,55 +1,56 @@
 <template>
   <div>
     <AppHeader></AppHeader>
-  <div class="wrapper-about">
-   
-
-    <!-- <div class="avatar"></div> -->
-    <h2 class="summary">
-      
-      With my camera in hand and a decade of commercial photography
-      experience, I can help to tell your story in a visually stunning way. I specialize in capturing beauty of brands
-      and individuals.
-      <br>
-      Currently in [Minsk, Belarus] </h2>
-    <div class="bg-about"
-      style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1;">
-    </div>
-    <h3 class="heading ">Featured by</h3>
-    <div class="clients short">
-      <NuxtLink id="apple" to="/clients/client4">Apple</NuxtLink>
-      <NuxtLink id="adobe" to="/clients/client4">Adobe</NuxtLink>
-      <NuxtLink id="adobe" to="/clients/client4">Vogue</NuxtLink>
+    <div class="wrapper-about">
 
 
+      <!-- <div class="avatar"></div> -->
+      <h2 class="summary">
 
-    </div>
-    <!-- <div class="clients long">
+        With my camera in hand and a decade of commercial photography
+        experience, I can help to tell your story in a visually stunning way. I specialize in capturing beauty of brands
+        and individuals.
+        <br>
+        Currently in [Minsk, Belarus]
+      </h2>
+      <div class="bg-about"
+        style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -10;">
+      </div>
+      <h3 class="heading ">Featured by</h3>
+      <div class="clients short">
+        <NuxtLink id="apple" to="/clients/client4">Apple</NuxtLink>
+        <NuxtLink id="adobe" to="/clients/client4">Adobe</NuxtLink>
+        <NuxtLink id="adobe" to="/clients/client4">Vogue</NuxtLink>
+
+
+
+      </div>
+      <!-- <div class="clients long">
       <NuxtLink to="/clients/client4">Vogue</NuxtLink>  
         
     </div> -->
 
-    <h3 class="heading sticky">Worked with</h3>
-    <div class="clients short">
-      <NuxtLink id="nike" to="/clients/client4">Nike</NuxtLink>
-      <NuxtLink id="zara" to="/clients/client4">Zara</NuxtLink>
-      <NuxtLink :to="'/clients/client1'" :id="'samsung'">Samsung</NuxtLink>
-      <NuxtLink :to="'/clients/client2'" :id="'xiaomi'">Xiaomi</NuxtLink>
-      <NuxtLink :to="'/clients/client1'" :id="'casio'">Casio</NuxtLink>
-      <NuxtLink :to="'/clients/client3'" :id="'honor'">Honor</NuxtLink>
-      <NuxtLink :to="'/clients/client3'" :id="'oppo'">Oppo</NuxtLink>
-      <NuxtLink :to="'/clients/client4'" :id="'dima-ermuzevich'">Dima Ermuzevich</NuxtLink>
-      <NuxtLink :to="'/clients/client4'" :id="'pexels'">Pexels</NuxtLink>
-      <NuxtLink :to="'/clients/client4'" :id="'stocksy'">Stocksy</NuxtLink>
-      <NuxtLink :to="'/clients/client4'" :id="'life'">Life</NuxtLink>
-      <NuxtLink to="/clients/client3">Mophie</NuxtLink>
-      <NuxtLink to="/clients/client3">Pocket Rocket  </NuxtLink>
-      <NuxtLink to="/clients/client4">Badoo</NuxtLink>
-      <NuxtLink to="/clients/client4">Papa John’s</NuxtLink>
+      <h3 class="heading sticky">Worked with</h3>
+      <div class="clients short">
+        <NuxtLink id="nike" to="/clients/client4">Nike</NuxtLink>
+        <NuxtLink id="zara" to="/clients/client4">Zara</NuxtLink>
+        <NuxtLink :to="'/clients/client1'" :id="'samsung'">Samsung</NuxtLink>
+        <NuxtLink :to="'/clients/client2'" :id="'xiaomi'">Xiaomi</NuxtLink>
+        <NuxtLink :to="'/clients/client1'" :id="'casio'">Casio</NuxtLink>
+        <NuxtLink :to="'/clients/client3'" :id="'honor'">Honor</NuxtLink>
+        <NuxtLink :to="'/clients/client3'" :id="'oppo'">Oppo</NuxtLink>
+        <NuxtLink :to="'/clients/client4'" :id="'dima-ermuzevich'">Dima Ermuzevich</NuxtLink>
+        <NuxtLink :to="'/clients/client4'" :id="'pexels'">Pexels</NuxtLink>
+        <NuxtLink :to="'/clients/client4'" :id="'stocksy'">Stocksy</NuxtLink>
+        <NuxtLink :to="'/clients/client4'" :id="'life'">Life</NuxtLink>
+        <NuxtLink to="/clients/client3">Mophie</NuxtLink>
+        <NuxtLink to="/clients/client3">Pocket Rocket  </NuxtLink>
+        <NuxtLink to="/clients/client4">Badoo</NuxtLink>
+        <NuxtLink to="/clients/client4">Papa John’s</NuxtLink>
 
 
-    </div>
-    <!-- <div class="clients long">
+      </div>
+      <!-- <div class="clients long">
       <NuxtLink to="/clients/client1">Casio</NuxtLink>
       <NuxtLink to="/clients/client2">Stutterheim</NuxtLink>
       <NuxtLink to="/clients/client3">Mophie</NuxtLink>
@@ -60,8 +61,8 @@
       <NuxtLink to="/clients/client4">Badoo</NuxtLink>
     </div> -->
 
+    </div>
   </div>
-</div>
 </template>
 
 
@@ -209,17 +210,46 @@ h2 {
 </style>
 
 <style lang="scss" scoped>
+.header-wrapper {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 
-  .header-wrapper{
-    height: auto !important;
-    background-color: var(--bg-light);
+  * {
     color: var(--text-dark);
+    // -webkit-text-stroke: 1px var(--text-dark);
 
-	*{
-      color: var(--text-dark);
-      // -webkit-text-stroke: 1px var(--text-dark);
+  }
+}
 
-    }
+@media screen and (max-width: 760px) {
+  .wrapper-about {
+    max-width: 100%;
+    padding: 12px;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 
+  h1, h3 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-family: 'PPNeueMontreal-Medium';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  a {
+    position: relative;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -.03rem;
+    width: fit-content;
+  }
+}
 </style>

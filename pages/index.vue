@@ -38,6 +38,7 @@ const currentIndex = ref(0);
 
 <template>
 	<div>
+		
 	<AppHeader></AppHeader>
 	<ImagesSlider :images="images" v-model="currentIndex"/>
 </div>
@@ -46,11 +47,11 @@ const currentIndex = ref(0);
 <style lang="scss" scoped>
   .header-wrapper{
     height: auto;
-    background-color: transparent;
-    color: var(--text-light);
+
+    color: var(--text-dark);
 
 	a, p{
-      color: var(--text-light);
+      color: var(--text-dark);
       // -webkit-text-stroke: 1px var(--text-dark);
 
     }

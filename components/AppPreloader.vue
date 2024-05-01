@@ -10,10 +10,8 @@ const isLoading = defineModel({
 <template>
 	<Transition name="fade" >
 		<div class="app-loader" v-if="isLoading">
-			<!-- Max Goncharenok
-				
-			<span style="font-family: 'PPEditorialNew-Italic';">a Photographer</span> -->
-			<svg width="393" height="104" viewBox="0 0 393 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+			<svg  viewBox="0 0 393 104" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<mask id="path-1-outside-1_2575_1506" maskUnits="userSpaceOnUse" x="-1" y="-0.347656" width="395"
 					height="104" fill="black">
 					<rect fill="white" x="-1" y="-0.347656" width="395" height="104" />
@@ -28,7 +26,7 @@ const isLoading = defineModel({
 					fill="#171717" mask="url(#path-1-outside-1_2575_1506)" />
 			</svg>
 
-
+		
 
 		</div>
 	</Transition>
@@ -40,6 +38,7 @@ const isLoading = defineModel({
 	top: 0;
 	left: 0;
 	width: 100vw;
+	max-width: 100vw;
 	height: 100vh;
 	background: var(--bg-light);
 	display: flex;
@@ -54,6 +53,8 @@ const isLoading = defineModel({
 	svg {
 		animation: blur 3s ease infinite;
 		animation-delay: 1s;
+		width:360px; 
+		height: 104;
 	}
 
 	@keyframes blur {
@@ -76,6 +77,15 @@ const isLoading = defineModel({
 		100% {
 			filter: blur(0px);
 		}
+	}
+	@media screen and (max-width: 760px) {
+		svg {
+		animation: blur 3s ease infinite;
+		animation-delay: 1s;
+		width: 300px; 
+		height: 100px;
+	}
+
 	}
 }
 </style>
