@@ -135,6 +135,8 @@ p {
     width: 100%;
     padding: 12px;
     font-size: 2rem;
+    
+
   }
 
   a {
@@ -142,7 +144,7 @@ p {
     width: fit-content;
     height: fit-content;
     // -webkit-text-stroke: .5px #fff;
-
+    animation: blur-header 1s ease;
   }
 
 
@@ -150,12 +152,23 @@ p {
     grid-column-start: 1;
     grid-column-end: 4;
     font-size: 1.5rem;
+    animation: none;
   }
 
   .title {
     padding-top: 20%;
+    animation: blur-header 1s ease;
   }
 
+  @keyframes blur-header {
+    0%{
+      filter: blur(20px);
+      
+    }
+    100%{
+      filter: blur(00px);
+    }
+  }
 
   .about {
     position: static;
