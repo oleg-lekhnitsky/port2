@@ -238,6 +238,7 @@ const generateItemStyle = (index: number) => {
 		z-index: 10;
 		line-height: 87%;
 		pointer-events: none;
+		font-size: 1rem;
 	}
 }
 </style>

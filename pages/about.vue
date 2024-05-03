@@ -238,7 +238,7 @@ h2 {
   h2 {
     font-family: 'PPNeueMontreal-Medium';
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.2;
   }
 

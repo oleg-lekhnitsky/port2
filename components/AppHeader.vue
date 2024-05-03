@@ -151,7 +151,7 @@ p {
   .logo {
     grid-column-start: 1;
     grid-column-end: 4;
-    font-size: 1rem;
+    font-size: 1.25rem;
     animation: none;
   }
 
@@ -180,8 +180,9 @@ p {
     display: block;
     border: none;
     padding: 12px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     background-color: transparent;
+    color: var(--text-dark);
   }
 
   .menu {
