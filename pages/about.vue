@@ -144,10 +144,10 @@ h1 {
 }
 
 h2 {
-  font-family: 'PPNeueMontreal-Medium';
+  // font-family: 'PPNeueMontreal-Medium';
   font-weight: 400;
-  font-size: 1.15rem;
-  line-height: 1.2;
+  font-size: 1.5rem;
+  line-height: 1.4;
 }
 
 .clients a:hover::after {
@@ -236,8 +236,8 @@ h2 {
   }
 
   h2 {
-    font-family: 'PPNeueMontreal-Medium';
-    font-weight: 400;
+    
+    
     font-size: 1.25rem;
     line-height: 1.2;
   }

@@ -3,7 +3,7 @@
     <NuxtLink class="logo" to="/">Maks Goncharenok</NuxtLink>
     <p class="title" :class="{ 'menu-open': isMenuOpen }">Photographer (brands+personal)</p>
     <div class="links" :class="{ 'menu-open': isMenuOpen }">
-      <NuxtLink to="mailto:maxgelatin@gmail.com">maksgelatin@gmail.com</NuxtLink>
+      <NuxtLink to="mailto:maxgelatin@gmail.com">Maksgelatin@gmail.com</NuxtLink>
       <div style="display: flex; gap: 2px">
         <NuxtLink to="https://www.instagram.com/maksgelatin" target="_blank">Instagram, </NuxtLink>
         <NuxtLink to="https://www.t.me/maksgelatin" target="_blank">Telegram</NuxtLink>
