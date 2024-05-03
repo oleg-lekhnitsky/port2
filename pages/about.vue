@@ -13,8 +13,7 @@
         <br>
         Currently in [Minsk, Belarus]
       </h2>
-      <div class="bg-about"
-        style="background-size: cover; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; z-index: -10;">
+      <div class="bg-about">
       </div>
       <h3 class="heading ">Featured by</h3>
       <div class="clients short">
@@ -75,6 +74,16 @@
   width: 100%;
   gap: 8px;
 
+}
+
+.bg-about {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
 }
 
 .avatar {
@@ -226,18 +235,35 @@ h2 {
     max-width: 100%;
     padding: 12px;
     padding-top: 120px;
+    padding-bottom: 70vw;
     display: flex;
     flex-direction: column;
     gap: 32px;
   }
 
-  h1, h3 {
+  .bg-about {
+  background-size: cover;
+  height: 50dvh;
+  width: 100vw;
+  position: fixed;
+  transform: translate(-50vw, -50dvh);
+  top: 100dvh;
+  left: 50vw;
+  z-index:10;
+}
+
+  .clients {
+    align-items: center;
+  }
+
+  h1,
+  h3 {
     font-size: 1.5rem;
   }
 
   h2 {
-    
-    
+
+
     font-size: 1.5rem;
     line-height: 1.2;
   }
