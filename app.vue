@@ -19,7 +19,7 @@ import { initScreenMediaQuery } from "~/utils/screenMediaQuery";
 
 // Swiper.use([Lazy]);
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
   addCustomVhProperty();
