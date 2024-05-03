@@ -160,6 +160,7 @@ const generateItemStyle = (index: number) => {
 		font-size: 0;
 		opacity: 0;
 		user-select: none;
+		-webkit-tap-highlight-color: transparent;
 
 		&--prev {
 			// cursor: w-resize;
