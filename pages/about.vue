@@ -77,12 +77,13 @@
 }
 
 .bg-about {
+  background-image: url('/public/img/maks.png');
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  height: 40vw;
+  width: 40vw;
   position: fixed;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   z-index: -10;
 }
 
@@ -91,7 +92,7 @@
   grid-column-end: 4;
   width: 4rem;
   height: 4rem;
-  background-image: url('/public/img/2.png');
+  background-image: url('/public/img/maks.png');
   background-size: cover;
   background-position: center;
   border-radius: 999px;
@@ -211,7 +212,7 @@ h2 {
 }
 
 .bg-about {
-  background-image: url('/public/img/cover-m.png');
+  
   background-size: cover;
   background-position: right;
   mix-blend-mode: multiply;
@@ -242,13 +243,14 @@ h2 {
   }
 
   .bg-about {
+    
   background-size: cover;
-  height: 50dvh;
-  width: 100vw;
+  height: 200px;
+  width: 200px;
   position: fixed;
   transform: translate(-50vw, -50dvh);
   top: 100dvh;
-  left: 50vw;
+  right: 0vw;
   z-index:10;
 }
 

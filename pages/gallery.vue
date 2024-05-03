@@ -7,13 +7,33 @@
     <div class="wrapper" style="">
 
       <!-- <h1>2024</h1> -->
-      <NuxtImg src="/img/3.png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
-      <NuxtImg src="/img/15.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
+      <NuxtImg src="/img/16File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/11.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
+      <NuxtImg src="/img/17File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/11File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/5File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" /> 
+      <NuxtImg src="/img/3File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/4File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/2File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/7File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/6File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/1File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/8File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/9File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/10File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      
+      <NuxtImg src="/img/13File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/14File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+      <NuxtImg src="/img/15File .png" format="webp" alt="Discover Nuxt 3" :placeholder="[]" />
+
+
+
+
 
 
       <NuxtImg src="/img/4.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
 
-      <NuxtImg src="/img/5.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
+      
       <h1 style="text-align: center;">(Apple) <br> specifies a grid item's size and location within a grid row by
         contributing a line, a span, or nothing automatic to its grid placement, </h1>
       <NuxtImg src="/img/13.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
@@ -33,7 +53,7 @@
         <h1 style="text-align: center;">(Apple) <br> specifies a grid item's size and location within a grid row by contributing a line, a span, or nothing automatic to its grid placement, </h1>
 
       <NuxtImg src="/img/21.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
-      <NuxtImg src="/img/11.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" />
+      
 
       <!-- <NuxtImg src="/img/8.png" format="webp" alt="Discover Nuxt 3" :placeholder="[5]" /> -->
     </div>
@@ -71,6 +91,7 @@ caption {
   padding-bottom: 0;
   max-width: 100vw;
   box-sizing: border-box;
+  background-color: var(--bg-light);
 }
 
 
@@ -90,7 +111,7 @@ h1 {
   display: flex;
   justify-items: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--bg-light);
 }
 
 .wide {
